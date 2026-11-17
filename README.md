@@ -6,13 +6,14 @@ ChatAtlas-Next 是从零重新规划的 AI 对话应用，面向经常使用 AI 
 
 ## 当前阶段
 
-当前处于 **Product Discovery 的仓库文档基线已审核阶段**。
+当前已完成 **User Journey Mapping 高层级结构审核**；下一阶段为 Feature Map，当前仅提出工作方案，等待用户确认后开展。
 
 - 用户已审核并批准这五个基线文件，同时授权执行首次 Commit；批准依据见研究基线 S9。
 - Product Vision v0.2 和 Idea Inventory v0.1 的仓库整理版均为 `Approved`。
 - 构想库已获认可作为 Discovery 输入；详细规则、MVP 范围与功能有效性尚未确定。
-- User Journey Mapping 尚未正式启动；既有候选旅程也未获确认。
-- 本次文档基线已获提交授权，实际提交记录以 Git 历史为准。没有业务代码或已确定的工程架构。
+- A～E 高层级旅程结构已获正式批准，文档状态为 `Approved — High-level Journey Map`，作为后续 Feature Map 与 MVP Planning 的规划依据；此次批准不代表用户行为或功能价值已验证。
+- 基础对话与可选增强解耦原则已获明确批准并写入 Product Vision 第 4 节；此前已放弃的逐题访谈不作为正式需求依据。
+- 首个文档基线已有阶段性提交，实际提交记录以 Git 历史为准。没有业务代码或已确定的工程架构。
 
 ## 文档入口
 
@@ -21,6 +22,7 @@ ChatAtlas-Next 是从零重新规划的 AI 对话应用，面向经常使用 AI 
 | [Agent 约定](AGENTS.md) | 项目工作方式、导航、状态与审批规则、外部平台边界 |
 | [Product Vision v0.2](docs/product/product-vision.md) | 产品定位、用户、问题域、价值与目标能力；Approved |
 | [Product Idea Inventory v0.1](docs/product/idea-inventory.md) | 已明确要求、用户构想与待探索事项；Approved，不代表 MVP 或验证完成 |
+| [User Journeys](docs/product/user-journeys.md) | Approved — High-level Journey Map；A～E 高层级结构获批，保留 As-Is 证据限制、To-Be 与方案假设的区别 |
 | [Product Discovery Baseline](docs/research/product-discovery-baseline.md) | 原话摘录、访谈摘要、决策与推断、来源限制及审核记录；Approved，研究证据限制保留 |
 
 ## 仓库知识与审核规则
@@ -33,11 +35,11 @@ ChatAtlas-Next 是从零重新规划的 AI 对话应用，面向经常使用 AI 
 
 ## 后续文档与 Skills 路径约定
 
-下表说明文档职责与后续路径。`docs/research/` 已用于本次基线；其余后续文件和目录尚未创建，按阶段授权产生：
+下表说明文档职责与后续路径。研究基线和旅程草案已有入口；其余后续文件和目录按阶段授权产生：
 
 | 阶段或材料 | 预期位置与边界 |
 | --- | --- |
-| 旅程、产品全景、MVP | `docs/product/` 下的 `user-journeys.md`、`feature-map.md`、`mvp-scope.md`，经相应阶段授权再创建 |
+| 产品全景、MVP | 后续在 `docs/product/` 创建 `feature-map.md`、`mvp-scope.md`；旅程草案已有入口，不代表这些阶段已启动 |
 | 研究与决策依据 | `docs/research/`，保留来源、原话/摘要/推断的区别及证据限制 |
 | 领域模型 | `docs/domain/`，按实际需要保存模型说明与图 |
 | 术语与架构决策 | Matt Pocock Skills 默认读取根目录 `GLOSSARY.md` 与 `docs/adr/`；按实际领域工作产生，不预建或维护第二份术语权威来源 |
@@ -52,7 +54,8 @@ ChatAtlas-Next 是从零重新规划的 AI 对话应用，面向经常使用 AI 
 
 ## 下一步
 
-1. 按本次用户授权完成文档基线的阶段性 Git Commit，提交后核对工作区状态。
-2. 候选旅程与研究顺序仍待确认；后续按用户新的授权开展 User Journey Mapping。
+1. 按用户授权提交 README、Product Vision、User Journeys 三份文档，形成高层级旅程基线；不自动 Push。
+2. 提出以 Product Vision、Idea Inventory、User Journey Map 为输入的 Feature Map 工作方案，按“用户价值 → Epic／产品能力领域 → Feature”组织；等待确认后再开展。
+3. 保留全部产品构想及其状态，区分基础对话与可选增强，检查关联、依赖和遗漏，不提前确定 MVP 范围。
 
-当前不开展下一阶段访谈，不创建 GLOSSARY、ADR、Spec、Tickets 或业务代码。
+当前仅收尾已批准旅程并提出 Feature Map 方案，不生成实际功能地图，不进入 MVP Planning、详细 Feature Discovery、UX/UI、Spec、Tickets 或业务代码开发，也不提前创建 GLOSSARY 或 ADR。产品文档中历史阶段边界保留；当前阶段以本入口及最新用户授权为准。
