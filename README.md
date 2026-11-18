@@ -6,7 +6,7 @@ ChatAtlas-Next 是从零重新规划的 AI 对话应用，面向经常使用 AI 
 
 ## 当前阶段
 
-当前处于 **MVP Planning：方案 A「多方向讨论与接续版」产品范围基线已批准**。本轮整理 MVP Scope 并检查落地，文档整理稿待用户审核，暂不执行 Git Commit。
+当前处于 **Feature Discovery + UX/UI Design：Conversation、Turn、Fork 基础领域建模**。用户已认可五条核心交互流程作为后续输入，并逐项确认基础领域语义；本轮按授权整理 GLOSSARY 与必要 ADR，文档整理稿为 Draft，不执行 Git Commit。
 
 - 用户已审核并批准这五个基线文件，同时授权执行首次 Commit；批准依据见研究基线 S9。
 - Product Vision v0.2 和 Idea Inventory v0.1 的仓库整理版均为 `Approved`。
@@ -27,6 +27,9 @@ ChatAtlas-Next 是从零重新规划的 AI 对话应用，面向经常使用 AI 
 | [User Journeys](docs/product/user-journeys.md) | Approved — High-level Journey Map；A～E 高层级结构获批，保留 As-Is 证据限制、To-Be 与方案假设的区别 |
 | [Feature Map v0.1](docs/product/feature-map.md) | Approved — Product Capability Map；三 Epic + Foundation 的产品能力分类与规划基线，保留来源、条目性质、依赖及开放事项，不代表 MVP 或实施批准 |
 | [MVP Scope v0.1](docs/product/mvp-scope.md) | 方案 A 及补充产品范围已批准；文档整理稿 Draft、待审核；包含首版深度、排除项、依赖风险、验收场景与后续问题，不批准详细规则或实施 |
+| [领域术语表](GLOSSARY.md) | Draft；已确认的 Conversation、Turn、Fork 等基础术语，定义与实现分离 |
+| [ADR-0001](docs/adr/0001-conversations-share-turns-after-fork.md) | Draft 整理稿、领域决定已确认；Fork 创建独立 Conversation、历史 Turn 可共同归属、后续独立继续 |
+| [ADR-0002](docs/adr/0002-map-nodes-represent-turns.md) | Draft 整理稿、领域决定已确认；地图节点代表 Turn，浏览位置与发送目标分开理解，具体 UX 待定 |
 | [Product Discovery Baseline](docs/research/product-discovery-baseline.md) | 原话摘录、访谈摘要、决策与推断、来源限制及审核记录；Approved，研究证据限制保留 |
 
 ## 仓库知识与审核规则
@@ -58,8 +61,8 @@ ChatAtlas-Next 是从零重新规划的 AI 对话应用，面向经常使用 AI 
 
 ## 下一步
 
-1. 核对 `docs/product/mvp-scope.md` 与本入口，展示变更摘要、文档检查结果、Git Status 与 Git Diff；其他已批准产品文档保持不变。
-2. 等待用户审核 MVP Scope 整理稿后，再按授权完成阶段提交；本轮不执行 Git Commit，不自动 Push。
-3. 后续 Feature Discovery、UX/UI、技术调查及实施另按用户授权开展；保留目标要求、后续候选、跨领域底线与开放事项，不由范围批准自动推进。
+1. 审核 GLOSSARY 与两份 ADR 的整理表述；逐项已确认的领域决定与文档全文审核状态分别记录。
+2. 后续按用户授权继续 Feature Discovery 与 UX/UI；优先处理历史浏览位置和发送目标的关系及具体交互，不将浏览自动视为切换或 Fork。
+3. 保留上下文构造、已有 Turn 修改或同步、未完成内容与恢复规则等开放边界；不因本轮领域决定自动进入 Spec、Tickets 或实施。
 
-当前仅整理并检查已批准方案 A 的 MVP 范围及 README，不开展 Feature Discovery、UX/UI、Spec、Tickets 或业务代码开发，不设计数据库、API 或具体业务规则，也不提前创建 GLOSSARY 或 ADR。产品文档中历史阶段边界保留；当前阶段以本入口、MVP Scope 的批准记录及最新用户授权为准。
+本轮仅落地并检查领域术语、必要 ADR 与导航，不执行 Git Commit 或 Push，不设计数据库、API、上下文窗口算法或失败恢复状态机，不编写业务代码。产品文档中历史阶段边界保留；当前阶段按最新用户授权理解，未修改其他已批准产品文档。
